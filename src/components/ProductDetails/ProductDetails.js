@@ -1,6 +1,6 @@
 import React from 'react'
 
-function ProductDetails({product, visible}) {
+function ProductDetails({ product, visible }) {
     if (!visible) return null
 
     if (!product) return (

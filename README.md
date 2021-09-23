@@ -95,7 +95,7 @@ In order for the info to show in the side panel, the new state variable will
 need to be passed through a prop to the ProductDetails component. Go ahead and
 add that as well.
 
-> Hint: The `visible` prop is already receiving the value of the `showOpen` 
+> Hint: The `visible` prop is already receiving the value of the `sideOpen` 
 > state variable. If you look at the ProductDetails component, you will find
 > the other prop that the previous developer already coded.
 
