@@ -1,8 +1,8 @@
-## Phase 3: Enhance the user experience
+# Explore React Hooks, Phase 3: Enhance The User Experience
 
 Congratulations getting two state variables working! You'll notice as you click
 around the application, these variables are completely independent. This can
-leave the user with a disconnect where they see an item highlighted in the list 
+leave the user with a disconnect where they see an item highlighted in the list
 without also seeing the details.
 
 For example, if you close the side panel then click the buttons, you will not be
@@ -20,13 +20,13 @@ more variables change. These variables can be either passed in through props or
 managed with state. In this component, you have two state variables to work
 with.
 
-### Auto-open side panel
+## Auto-open side panel
 
-First, consider which variable change will trigger the auto-open effect 
-(`selectedProduct`) and which setter function will need to be called 
+First, consider which variable change will trigger the auto-open effect
+(`selectedProduct`) and which setter function will need to be called
 (`setSideOpen(true)`).
 
-Second, code the framework of the `useEffect` hook. Each time you utilize 
+Second, code the framework of the `useEffect` hook. Each time you utilize
 `useEffect`, it can start this same way.
 
 ```javascript
@@ -53,13 +53,13 @@ showing that item's details.
 
 ## Clear the selection when the panel closes
 
-Again, consider which variable change will trigger the effect (`sideOpen`), and 
+Again, consider which variable change will trigger the effect (`sideOpen`), and
 which setter function will need to be called (`setSelection`).
 
 Second, put in the framework for `useEffect`. (You can find it above, if you'd
 like to look at it again.)
 
-Finally, put the trigger into the array and the call to the setter in the 
+Finally, put the trigger into the array and the call to the setter in the
 function body. Again, consider what conditionals are needed, if any.
 
 You probably wrote something like this.
@@ -70,15 +70,15 @@ useEffect(() => {
 }, [sideOpen]);
 ```
 
-Refresh your browser and try to close the side panel. One of three things will 
+Refresh your browser and try to close the side panel. One of three things will
 happen:
 
-1. If all worked as expected, congratulations! You are ready to continue with 
-  the next phase.
-2. If the highlight in the list disappears, and the side panel resets to 
-  "Our Products..." while remaining open, that's okay. Continue to the next 
-  phase to do some debugging, and you can solve this bug in the process.
-3. If the list did not clear or other errors occurred, please check your code. 
-  You can take a peek at the next phase to see if debugging state change will
-  solve your issues. Good developers know when to reach out for help, if 
-  necessary, before continuing. 
+1. If all worked as expected, congratulations! You are ready to continue with
+   the next phase.
+2. If the highlight in the list disappears, and the side panel resets to "Our
+   Products..." while remaining open, that's okay. Continue to the next phase to
+   do some debugging, and you can solve this bug in the process.
+3. If the list did not clear or other errors occurred, please check your code.
+   You can take a peek at the next phase to see if debugging state change will
+   solve your issues. Good developers know when to reach out for help, if
+   necessary, before continuing.

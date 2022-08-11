@@ -1,6 +1,6 @@
 # Explore React Hooks
 
-Another developer started a product list page and has requested your help to 
+Another developer started a product list page and has requested your help to
 complete it.
 
 Here are the incomplete features.
@@ -13,7 +13,7 @@ Here are the incomplete features.
 
 Go ahead and clone the starter from the `Download` link at the bottom of this
 page. All the changes you need to make will be in
-_src/components/ProductView/ProductView.js_.
+__src/components/ProductView/ProductView.js__.
 
 ## Prepare
 
@@ -26,26 +26,26 @@ from as that will be managed outside the component.) Additionally, they finished
 the layouts in the UI with a box, image, and button for each product as well as
 a panel on the right side.
 
-When you run the application (`npm install` followed by `npm start`), you'll 
-see these UI elements display, but clicking does not do anything. That's where
-you come in!
+When you run the application (`npm install` followed by `npm start`), you'll see
+these UI elements display, but clicking does not do anything. That's where you
+come in!
 
 When you look at the code in `ProductView`, you'll find `console.log` statements
-in the `onClick` event handlers. That's a clue some work is needed there. 
-Additionally, you'll find a comment that starts with "TODO". While that might 
+in the `onClick` event handlers. That's a clue some work is needed there.
+Additionally, you'll find a comment that starts with "TODO". While that might
 not be the only work required, these will be elements you need to modify.
 
 An astute developer may also notice there are some props on other components
 that aren't in use yet. The extra effort to find them while you're coming up to
-speed may save you some time later since you may be able to leverage them to 
+speed may save you some time later since you may be able to leverage them to
 accomplish your tasks.
 
-Next, you need to pick somewhere to start. The panel toggle seems good since it 
+Next, you need to pick somewhere to start. The panel toggle seems good since it
 has a `TODO` comment.
 
 ## Phase 1: Toggle side panel
 
-To replace a constant with a state variable, you'll want to employ the 
+To replace a constant with a state variable, you'll want to employ the
 `useState` hook. Perhaps, something like this
 
 ```javascript
@@ -54,22 +54,22 @@ const [sideOpen, setSideOpen] = useState(true);
 
 Remember to add its import at the top. It will come from the `react` library.
 
-The application should still run after this change, although VS Code and/or the 
-JavaScript console will probably warn you that `setSideOpen` is defined but not 
+The application should still run after this change, although VS Code and/or the
+JavaScript console will probably warn you that `setSideOpen` is defined but not
 used.
 
-Go ahead and use it to replace the `console.log` associated with the toggle UI 
+Go ahead and use it to replace the `console.log` associated with the toggle UI
 on the side panel. Remember
 
 * State variables, like constants, are accessible within the JSX.
 * Likewise, the setting function for any state variable can be called from JSX.
-* Setting a boolean value that's `true` to `false` (or  `false` to `true`) is 
+* Setting a boolean value that's `true` to `false` (or  `false` to `true`) is
   the purpose of the NOT operator (`!`).
   
-All this means you could choose to toggle the value with a function call like 
+All this means you could choose to toggle the value with a function call like
 `setSideOpen(!sideOpen)`.
 
-After replacing the `console.log` you will likely have code that looks something 
+After replacing the `console.log` you will likely have code that looks something
 like this:
 
 ```javascript
@@ -77,7 +77,7 @@ like this:
      onClick={() => setSideOpen(!sideOpen)}>
 ```
 
-If all the changes are correct, you will be able to click the ">" tab on the 
-side panel to close it. Study the code and see if you can find where it switches 
+If all the changes are correct, you will be able to click the ">" tab on the
+side panel to close it. Study the code and see if you can find where it switches
 to "<". It is common practice in **React** to use a state variable in multiple
 UI updates.
