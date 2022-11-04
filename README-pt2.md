@@ -4,7 +4,7 @@ Now, you will add a second state variable on your own. This one will track the
 `selectedProduct`.
 
 > **Hint:** The previous developer left a `console.log` in the handler for
-> `onClick` of each `ProductListItem` to show you the data that is needs to be
+> `onClick` of each `ProductListItem` to show you the data that is needed to be
 > stored in state for the selected item.
 
 In order for the info to show in the side panel, the new state variable will
